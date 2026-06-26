@@ -1,0 +1,41 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+          pip install pytest httpx
+
+      - name: Treinar modelo
+        run: python src/treinar.py
+
+      - name: Executar testes
+        run: pytest tests/ -v
+
+      - name: Build da imagem Docker
+        run: docker build -t wine-api:latest .
+
+      - name: Verificar se container sobe
+        run: |
+          docker run -d --name wine-api-test -p 8000:8000 wine-api:latest
+          sleep 5
+          curl -f http://localhost:8000/health
+          docker stop wine-api-test
