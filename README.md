@@ -151,6 +151,8 @@ wine_api_docker/
 │   └── api.py               # API REST com FastAPI
 ├── tests/
 │   └── test_api.py          # 5 testes automatizados
+├── docs/
+│   └── screenshots/         # capturas do Swagger UI
 ├── modelo/                  # artefatos gerados localmente (gitignored)
 ├── Dockerfile               # receita para montar a imagem
 ├── docker-compose.yml       # orquestra o container
@@ -172,6 +174,20 @@ wine_api_docker/
 - **`pytest`**: framework de testes que valida comportamento da API antes de qualquer deploy
 - **`healthcheck`**: endpoint dedicado para monitoramento, padrao em qualquer servico em producao
 - **`FastAPI`**: framework async com validacao automatica, documentacao Swagger e tipagem via Pydantic
+
+---
+
+## `Demonstração`
+
+**Swagger UI — requisição** — endpoint `POST /classificar` com os 13 parâmetros químicos do vinho preenchidos.
+
+![Swagger Request](docs/screenshots/swagger-request.png)
+
+---
+
+**Swagger UI — resposta `200`** — modelo classifica como `"Classe 1 (premium)"` com 100% de confiança e exibe as probabilidades por classe.
+
+![Swagger Response](docs/screenshots/swagger-response.png)
 
 ---
 
