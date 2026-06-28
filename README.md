@@ -179,13 +179,13 @@ wine_api_docker/
 
 ## `Demonstração`
 
-**Swagger UI — requisição** — endpoint `POST /classificar` com os 13 parâmetros químicos do vinho preenchidos.
+**Swagger UI, requisição**: endpoint `POST /classificar` com os 13 parâmetros químicos do vinho preenchidos.
 
 ![Swagger Request](docs/screenshots/swagger-request.png)
 
 ---
 
-**Swagger UI — resposta `200`** — modelo classifica como `"Classe 1 (premium)"` com 100% de confiança e exibe as probabilidades por classe.
+**Swagger UI, resposta `200`**: modelo classifica como `"Classe 1 (premium)"` com 100% de confiança e exibe as probabilidades por classe.
 
 ![Swagger Response](docs/screenshots/swagger-response.png)
 
@@ -200,7 +200,7 @@ Distribuído sob a licença MIT. Veja [LICENSE](LICENSE) para mais informações
 ## `Autor`
 
 **Arthur Baptista dos Santos**
-RM 565346 — Inteligência Artificial · FIAP 2025–2026
+RM 565346 · Inteligência Artificial · FIAP 2025-2026
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Arthur%20Baptista-0077B5?logo=linkedin)](https://linkedin.com/in/arthur-baptista-dos-santos)
 [![GitHub](https://img.shields.io/badge/GitHub-Arthur--Baptista--dos--Santos-181717?logo=github)](https://github.com/Arthur-Baptista-dos-Santos)
