@@ -12,6 +12,8 @@
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3-orange)
 ![GitHub Actions](https://img.shields.io/badge/CI/CD-GitHub%20Actions-black)
 ![pytest](https://img.shields.io/badge/testes-pytest-yellow)
+![CI](https://github.com/Arthur-Baptista-dos-Santos/wine_api_docker/actions/workflows/ci.yml/badge.svg?branch=main)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
 
@@ -115,7 +117,7 @@ python -m venv .venv
 .venv\Scripts\activate
 
 pip install -r requirements.txt
-pip install pytest httpx2
+pip install pytest httpx
 
 python src/treinar.py
 uvicorn src.api:app --reload
@@ -170,3 +172,19 @@ wine_api_docker/
 - **`pytest`**: framework de testes que valida comportamento da API antes de qualquer deploy
 - **`healthcheck`**: endpoint dedicado para monitoramento, padrao em qualquer servico em producao
 - **`FastAPI`**: framework async com validacao automatica, documentacao Swagger e tipagem via Pydantic
+
+---
+
+## `Licença`
+
+Distribuído sob a licença MIT. Veja [LICENSE](LICENSE) para mais informações.
+
+---
+
+## `Autor`
+
+**Arthur Baptista dos Santos**
+RM 565346 — Inteligência Artificial · FIAP 2025–2026
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Arthur%20Baptista-0077B5?logo=linkedin)](https://linkedin.com/in/arthur-baptista-dos-santos)
+[![GitHub](https://img.shields.io/badge/GitHub-Arthur--Baptista--dos--Santos-181717?logo=github)](https://github.com/Arthur-Baptista-dos-Santos)
